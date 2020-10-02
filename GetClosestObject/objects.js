@@ -2,9 +2,6 @@ const player = mp.players.local;
 
 exports.checkLocalObjectsFirst = function(player) {
     // GasPumps
-    //var tank01Obj = mp.game.joaat("prop_gas_pump_1a");
-    //var tank02Obj = mp.game.joaat("prop_gas_pump_1b");
-    //var tank03Obj = mp.game.joaat("prop_gas_pump_1c");
     var tank04Obj = mp.game.joaat("prop_gas_pump_1d");
     var tank05Obj = mp.game.joaat("prop_gas_pump_old3");
     var tank06Obj = mp.game.joaat("prop_gas_pump_old2");
@@ -84,10 +81,7 @@ exports.checkLocalObjectsFirst = function(player) {
     var slot6 = mp.game.object.getClosestObjectOfType(player.position.x, player.position.y, player.position.z, 1.5, 1096374064, false, true, true);
     var slot7 = mp.game.object.getClosestObjectOfType(player.position.x, player.position.y, player.position.z, 1.5, 207578973, false, true, true);
     var slot8 = mp.game.object.getClosestObjectOfType(player.position.x, player.position.y, player.position.z, 1.5, 3807744938, false, true, true);
-
-
     var special = mp.game.object.getClosestObjectOfType(player.position.x, player.position.y, player.position.z, 1, 3802829770, false, true, true);
-    var kondomat = mp.game.object.getClosestObjectOfType(player.position.x, player.position.y, player.position.z, 4, 684389648, false, true, true);
 
     if (atm1 || atm2 || atm3 || atm4) {
         return "atm";
@@ -113,8 +107,6 @@ exports.checkLocalObjectsFirst = function(player) {
         return "special";
     } else if (fuelflight) {
         return "fuelflight";
-    } else if (kondomat) {
-        return "kondomat";
     } else if (slot1 || slot2 || slot3 || slot4 || slot5 || slot6 || slot7 || slot8) {
         return "slots";
     }
