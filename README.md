@@ -1,5 +1,5 @@
 # ragemp-scripts
-RageMP Scripts developed by the BetterLife MultiGaming Community
+RageMP Scripts developed by the New|Territory Community
 
 ## Available
 
